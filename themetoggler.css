@@ -29,6 +29,7 @@ h2{
     text-align: center;
     font-weight: inherit;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 p{
@@ -40,19 +41,29 @@ p{
 }
 
 p.small{
+    font-size: 0.8rem;
     position: fixed;
     bottom: calc(1rem + 10vh);
     padding: 0;
 }
 
-small{
-    font-weight: inherit;
+a{
+    color: inherit;
+    opacity: 0.7;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    transition: opacity 0.4s var(--ease-elastic-1);
+}
+
+a:hover{
+    opacity: 1;
 }
 
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/Poppins-Light.woff2') format('woff2'),
-         url('fonts/Poppins-Light.woff') format('woff');
+        url('fonts/Poppins-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -60,12 +71,12 @@ small{
 
 .theme-toggle {
 	--size: 3rem;
-	--icon-fill: hsl(210 10% 30%);
-	--icon-fill-hover: hsl(210 10% 15%);
-        --ease: cubic-bezier(.25, 0, .3, 1);
-        --ease-out: cubic-bezier(0, 0, 0, 1);
-        --ease-elastic-1: cubic-bezier(.5, 1.25, .75, 1.25);
-        --ease-elastic-2: cubic-bezier(.5, 1.5, .75, 1.25);
+	--icon-fill: #454d54;
+	--icon-fill-hover: #22262a;
+	--ease: cubic-bezier(.25, 0, .3, 1);
+	--ease-out: cubic-bezier(0, 0, 0, 1);
+	--ease-elastic-1: cubic-bezier(.5, 1.25, .75, 1.25);
+	--ease-elastic-2: cubic-bezier(.5, 1.5, .75, 1.25);
 	background: none;
 	border: none;
 	padding: 0;
@@ -79,7 +90,6 @@ small{
 	outline-offset: 5px;
 }
 
-
 .theme-toggle>svg {
 	inline-size: 100%;
 	block-size: 100%;
@@ -87,8 +97,8 @@ small{
 }
 
 body.dark .theme-toggle {
-	--icon-fill: hsl(210 10% 70%);
-	--icon-fill-hover: hsl(210 15% 90%);
+	--icon-fill: #abb3ba;
+	--icon-fill-hover: #e2e6e9;
 }
 
 @media (hover: none) {
